@@ -1,24 +1,34 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
-import Card from './components/Card';
 import Footer from './components/Footer';
-import BrandCard from './components/BrandCard';
 import BrandList from './components/BrandList';
+import {Route} from 'react-router-dom';
+import Home from './components/Home';
+import {Switch} from 'react-router';
+import ChocolateList from './components/ChocolateList';
+import SearchResult from './components/SearchResult';
+import Signup from './components/Signup';
+import Login from './components/Login';
+
 
 class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {brands: [], types: []}
+    this.state = {brands: [], chocolates: []};
+
   }
 
   componentWillMount() {
     fetch('http://localhost:4000/brands')
       .then(r => r.json())
-      .then(brands => this.setState({brands}))
+      .then(brands => this.setState({brands}));
+
+    fetch('http://localhost:4000/chocolates')
+      .then(r => r.json())
+      .then(chocolates => this.setState({chocolates}))
   }
 
   render() {
@@ -26,22 +36,21 @@ class App extends Component {
       <div className="container">
         <Navigation/>
         <Header/>
-        {/*<div className="row">
-          <Card
-            image="images/Banniere_HP_pickandmix.jpg"
-            title="Lindor"/>
-          <Card
-            image="images/key_visual_Excellence_Mobile_1.2.jpg"
-            title="Excellence"/>
-          <Card
-            image="images/LINDT-History-HELLO_Mobile_1.2.jpg"
-            title="Hello"/>
-          <Card
-            image="images/00_Hmpg_Signature_-_Salted_Caramels_server_left_.jpg"
-            title="Salted Caramel"/>
-        </div>*/}
-        {this.state.brands.length ? <BrandList brands={this.state.brands}/> : <img className="spinner" src="images/Spinner.gif"/>}
-
+        {/* Application Routing */}
+        <main>
+          <Switch>
+            <Route path="/home" component={Home}/>
+            <Route path="/brands" render={() =>
+              this.state.brands.length ? <BrandList brands={this.state.brands}/> :
+                <img className="spinner" src="images/Facebook.gif"/>}/>
+            <Route path="/chocolates" render={() =>
+              this.state.chocolates.length ? <ChocolateList chocolates={this.state.chocolates}/> :
+                <img className="spinner" src="images/Facebook.gif"/>}/>
+            <Route path="/search" component={SearchResult}/>
+            <Route path="/signup" component={Signup}/>
+            <Route path="/login" component={Login}/>
+          </Switch>
+        </main>
         <Footer/>
       </div>
     );

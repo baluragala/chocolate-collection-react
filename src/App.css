@@ -1,39 +1,29 @@
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-}
-
-.App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-}
-
-.App-intro {
-    font-size: large;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 .spinner {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    top: 50%;
-    left: 50%;
-    margin-left: -50px;
-    margin-top: -50px;
-    background-size: 100%;
+    margin: 0 auto;
+    padding-left: 45%;
 }
+
+.card {
+    margin: 10px;
+}
+
+main {
+    min-height: 385px;
+}
+
+.home p:first-of-type {
+    font-family: "Pacifico", cursive;
+    font-size: 3em;
+    padding: 40px;
+    text-align: center;
+    color: orangered;
+    border: none;
+}
+
+.home p {
+    color: black;
+    text-align: center;
+    border: none;
+    font-size: 2em;
+}
+
