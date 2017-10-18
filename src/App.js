@@ -12,14 +12,16 @@ import SearchResult from './components/SearchResult';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import BrandHome from './components/BrandHome';
+import Logout from './components/Logout';
 
 
 class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {brands: [], chocolates: []};
-
+    this.state = {brands: [], chocolates: [], isLoggedIn: false};
+    this.onSignupSuccess = this.onSignupSuccess.bind(this);
+    this.onLoginSuccess = this.onLoginSuccess.bind(this);
   }
 
   componentWillMount() {
@@ -32,29 +34,42 @@ class App extends Component {
       .then(chocolates => this.setState({chocolates}))
   }
 
+  onSignupSuccess(firstName, lastName) {
+    this.setState({firstName, lastName, isLoggedIn: true})
+  }
+
+  onLoginSuccess(firstName, lastName) {
+
+    this.setState({firstName, lastName, isLoggedIn: true})
+  }
+
   render() {
     return (
       <div className="container">
-        <Navigation/>
+        <Navigation isLoggedIn={this.state.isLoggedIn}
+                    firstName={this.state.firstName}
+                    lastName={this.state.lastName}/>
         <Header/>
         {/* Application Routing */}
         <main>
           <Switch>
-            <Route path="/home" component={Home}/>
-
-            <Route exact path="/brands" render={() =>
-              this.state.brands.length ? <BrandList brands={this.state.brands}/> :
+            <Route exact path="/" component={Home}/>
+            <Route path="/home"
+                   render={props => <Home {...props} isLoggedIn={this.state.isLoggedIn} firstName={this.state.firstName}
+                                          lastName={this.state.lastName}/>}/>
+            <Route exact path="/brands" render={props =>
+              this.state.brands.length ? <BrandList {...props} brands={this.state.brands}/> :
                 <img className="spinner" src="images/Facebook.gif"/>}/>
             <Route path="/brands/:brandId" component={BrandHome}/>
 
-            <Route path="/chocolates" render={() =>
-              this.state.chocolates.length ? <ChocolateList chocolates={this.state.chocolates}/> :
+            <Route path="/chocolates" render={props =>
+              this.state.chocolates.length ? <ChocolateList {...props} chocolates={this.state.chocolates}/> :
                 <img className="spinner" src="images/Facebook.gif"/>}/>
             <Route path="/search" component={SearchResult}/>
 
-            <Route path="/signup" component={Signup}/>
-            <Route path="/login" component={Login}/>
-
+            <Route path="/signup" render={props => <Signup {...props} onSignupSuccess={this.onSignupSuccess}/>}/>
+            <Route path="/login" render={props => <Login {...props} onLoginSuccess={this.onLoginSuccess}/>}/>
+            <Route path="/logout" component={Logout}/>
           </Switch>
         </main>
         <Footer/>

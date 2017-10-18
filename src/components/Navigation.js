@@ -2,6 +2,7 @@ import React from 'react'
 import './Navigation.css'
 import Search from './Search';
 import {NavLink} from 'react-router-dom';
+import Status from './Status';
 
 const Navigation = (props) => {
 
@@ -19,6 +20,7 @@ const Navigation = (props) => {
           <NavLink className="nav-link" to="/chocolates" activeClassName="active">Chocolates</NavLink>
         </li>
       </ul>
+      <Status isLoggedIn={props.isLoggedIn} firstName={props.firstName} lastName={props.lastName}/>
       <Search/>
     </div>
   </nav>)
