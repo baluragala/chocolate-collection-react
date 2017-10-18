@@ -10,7 +10,7 @@ const Header = (props) => (<div>
 
 const Background = styled.div`
   background: url('images/category_header.jpg');
-  height: 300px;
+  height: 200px;
   border-radius: 15px;
 `;
 
@@ -18,7 +18,7 @@ const Title = styled.h1`
   font-family: 'Pacifico', cursive;
   font-size:4em;
   color:white;
-  padding-top:120px;
+  padding-top:80px;
   text-align:center;
 `
 

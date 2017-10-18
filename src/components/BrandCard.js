@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const BrandCard = (props) => (
 
   <div className="col-sm-6 col-md-4 col-lg-3 mt-4">
-    <Link to="/chocolates">
+    <Link to={`/brands/${props.brandId}`}>
       <div className="card">
         <img className="card-img-top"
              style={styles.image}

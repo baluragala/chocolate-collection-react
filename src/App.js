@@ -11,6 +11,7 @@ import ChocolateList from './components/ChocolateList';
 import SearchResult from './components/SearchResult';
 import Signup from './components/Signup';
 import Login from './components/Login';
+import BrandHome from './components/BrandHome';
 
 
 class App extends Component {
@@ -40,15 +41,20 @@ class App extends Component {
         <main>
           <Switch>
             <Route path="/home" component={Home}/>
-            <Route path="/brands" render={() =>
+
+            <Route exact path="/brands" render={() =>
               this.state.brands.length ? <BrandList brands={this.state.brands}/> :
                 <img className="spinner" src="images/Facebook.gif"/>}/>
+            <Route path="/brands/:brandId" component={BrandHome}/>
+
             <Route path="/chocolates" render={() =>
               this.state.chocolates.length ? <ChocolateList chocolates={this.state.chocolates}/> :
                 <img className="spinner" src="images/Facebook.gif"/>}/>
             <Route path="/search" component={SearchResult}/>
+
             <Route path="/signup" component={Signup}/>
             <Route path="/login" component={Login}/>
+
           </Switch>
         </main>
         <Footer/>

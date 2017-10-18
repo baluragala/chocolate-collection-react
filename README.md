@@ -1,6 +1,10 @@
-React chocolate store is a course project for React JS course.
+React chocolate collection is a course project for React JS course.
 
 Author: [Bala Krishna Ragala](http://www.baluragala.com)
+
+This project uses [json-server](https://github.com/typicode/json-server) as a fake backend.
+To start the backend server please run the following command in the root of the project 
+####json-server --watch db.json --port 4000 --delay 2000 --static ./public
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
