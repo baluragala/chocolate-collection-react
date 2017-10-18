@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom';
 const Navigation = (props) => {
 
   return (<nav className="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-    <NavLink className="navbar-brand" to="/">Chocolate Collection</NavLink>
+    <NavLink className="navbar-brand" to="/home">Chocolate Collection</NavLink>
     <div className="collapse navbar-collapse" id="navbarCollapse">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
