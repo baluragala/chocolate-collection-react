@@ -13,6 +13,8 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import BrandHome from './components/BrandHome';
 import Logout from './components/Logout';
+import ChocolateDetail from './components/ChocolateDetail';
+import AddChocolate from './components/AddChocolate';
 
 
 class App extends Component {
@@ -22,6 +24,7 @@ class App extends Component {
     this.state = {brands: [], chocolates: [], isLoggedIn: false};
     this.onSignupSuccess = this.onSignupSuccess.bind(this);
     this.onLoginSuccess = this.onLoginSuccess.bind(this);
+    this.doLogout = this.doLogout.bind(this);
   }
 
   componentWillMount() {
@@ -43,6 +46,10 @@ class App extends Component {
     this.setState({firstName, lastName, isLoggedIn: true})
   }
 
+  doLogout() {
+    this.setState({isLoggedIn: false})
+  }
+
   render() {
     return (
       <div className="container">
@@ -62,14 +69,18 @@ class App extends Component {
                 <img className="spinner" src="images/Facebook.gif"/>}/>
             <Route path="/brands/:brandId" component={BrandHome}/>
 
-            <Route path="/chocolates" render={props =>
-              this.state.chocolates.length ? <ChocolateList {...props} chocolates={this.state.chocolates}/> :
+            <Route exact path="/chocolates" render={props =>
+              this.state.chocolates.length ?
+                <ChocolateList {...props} chocolates={this.state.chocolates} isLoggedIn={this.state.isLoggedIn}/> :
                 <img className="spinner" src="images/Facebook.gif"/>}/>
+            <Route path="/chocolates/add" component={AddChocolate}/>
+            <Route path="/chocolates/:chocolateId" component={ChocolateDetail}/>
+
             <Route path="/search" component={SearchResult}/>
 
             <Route path="/signup" render={props => <Signup {...props} onSignupSuccess={this.onSignupSuccess}/>}/>
             <Route path="/login" render={props => <Login {...props} onLoginSuccess={this.onLoginSuccess}/>}/>
-            <Route path="/logout" component={Logout}/>
+            <Route path="/logout" render={props => <Logout {...props} doLogout={this.doLogout}/>}/>
           </Switch>
         </main>
         <Footer/>

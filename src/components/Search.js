@@ -18,7 +18,7 @@ class Search extends React.Component {
              value={this.state.q}
              onChange={this.handleChange}
       />
-      <Link className="btn btn-success my-2 my-sm-0" type="button"
+      <Link className="btn btn-outline-success my-2 my-sm-0" type="button"
             to={`/search?q=${this.state.q}`}>
         Search
       </Link>

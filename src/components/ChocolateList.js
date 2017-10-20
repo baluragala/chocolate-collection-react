@@ -1,11 +1,16 @@
 import React from 'react';
 import ChocolateCard from './ChocolateCard';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 const ChocolateList = (props) => (
-  <div className="row">
-    {props.chocolates.map(chocolate => <ChocolateCard key={chocolate.id} image={chocolate.image} title={chocolate.name}
-                                                      desc={chocolate.desc}/>)}
+  <div>
+    {props.isLoggedIn && <Link to="/chocolates/add" className="btn btn-outline-success mt-1">ADD</Link>}
+    <div className="row">
+      {props.chocolates.map(chocolate => <ChocolateCard chocolateId={chocolate.id} key={chocolate.id}
+                                                        image={chocolate.image} title={chocolate.name}
+                                                        desc={chocolate.desc}/>)}
+    </div>
   </div>
 );
 
