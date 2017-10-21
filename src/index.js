@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
+import {Provider} from 'react-redux'
+import store from './createStore';
 
 import {
   BrowserRouter as Router,
@@ -11,7 +13,9 @@ import {
 } from 'react-router-dom'
 
 ReactDOM.render(
-  <Router>
-    <App/>
-  </Router>, document.getElementById('root'));
+  <Provider store={store}>
+    <Router>
+      <App/>
+    </Router>
+  </Provider>, document.getElementById('root'));
 registerServiceWorker();

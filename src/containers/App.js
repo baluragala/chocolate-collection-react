@@ -1,21 +1,26 @@
 import React, {Component} from 'react';
 import './App.css';
-import Navigation from './components/Navigation';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import BrandList from './components/BrandList';
+import Navigation from '../components/Navigation';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import BrandList from '../components/BrandList';
 import {Route} from 'react-router-dom';
-import Home from './components/Home';
+import Home from '../components/Home';
 import {Switch} from 'react-router';
-import ChocolateList from './components/ChocolateList';
-import SearchResult from './components/SearchResult';
-import Signup from './components/Signup';
-import Login from './components/Login';
-import BrandHome from './components/BrandHome';
-import Logout from './components/Logout';
-import ChocolateDetail from './components/ChocolateDetail';
-import AddChocolate from './components/AddChocolate';
+import ChocolateList from '../components/ChocolateList';
+import SearchResult from '../components/SearchResult';
+import Signup from '../components/Signup';
+import Login from '../components/Login';
+import BrandHome from '../components/BrandHome';
+import Logout from '../components/Logout';
+import ChocolateDetail from '../components/ChocolateDetail';
+import AddChocolate from '../components/AddChocolate';
 
+import * as brandsActionCreators from '../actionCreators/brands'
+import * as usersActionCreators from '../actionCreators/users'
+import * as chocolatesActionCreators from '../actionCreators/chocolates'
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 class App extends Component {
 
@@ -89,4 +94,18 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    brands: state.brands.brands,
+    chocolates: state.chocolates.chocolates,
+    isLoggedIn: state.isLoggedIn
+  }
+}
+
+function mapDisptachToProps(dispatch) {
+  return {
+    actions: bindActionCreators({...brandsActionCreators, ...usersActionCreators, ...chocolatesActionCreators}, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDisptachToProps)(App);
