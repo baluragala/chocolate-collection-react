@@ -19,3 +19,25 @@ export function showBrandsError(error) {
     error
   }
 }
+
+export function fetchBrandWithChocolates(brandId) {
+  return {
+    type: brandActionTypes.FETCH_BRAND_WITH_CHOCOLATES,
+    brandId
+  }
+}
+
+export function showBrandWithChocolates(brand, chocolates) {
+  return {
+    type: brandActionTypes.FETCH_BRAND_WITH_CHOCOLATES_SUCCESS,
+    brand,
+    chocolates
+  }
+}
+
+export function showBrandWithChocolatesError(error) {
+  return {
+    type: brandActionTypes.FETCH_BRAND_WITH_CHOCOLATES_ERROR,
+    error
+  }
+}

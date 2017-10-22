@@ -11,7 +11,7 @@ import ChocolateList from '../components/ChocolateList';
 import SearchResult from '../components/SearchResult';
 import Signup from '../components/Signup';
 import Login from '../components/Login';
-import BrandHome from '../components/BrandHome';
+import BrandHome from './BrandHome';
 import Logout from '../components/Logout';
 import ChocolateDetail from '../components/ChocolateDetail';
 import AddChocolate from '../components/AddChocolate';

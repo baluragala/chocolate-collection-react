@@ -6,7 +6,7 @@ import createSagaMiddleware from 'redux-saga'
 import {Map} from 'immutable'
 
 let initialState = {
-  brandsState: Map({brands: []}),
+  brandsState: Map({brands: [], isFetching: true}),
   chocolatesState: Map({chocolates: []}),
   usersState: Map({isLoggedIn: false, firstName: '', lastName: ''})
 };
@@ -15,3 +15,4 @@ const store = createStore(rootReducer, initialState, applyMiddleware(sagaMiddlew
 sagaMiddleware.run(rootSaga);
 
 export default store;
+
