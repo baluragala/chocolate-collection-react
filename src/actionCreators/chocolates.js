@@ -29,7 +29,7 @@ export function fetchChocolate(id) {
 
 export function showChocolate(chocolate) {
   return {
-    type: chocolateActionTypes.FETCH_CHOCOLATES_SUCCESS,
+    type: chocolateActionTypes.FETCH_CHOCOLATE_SUCCESS,
     chocolate
   }
 }

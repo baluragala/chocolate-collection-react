@@ -14,7 +14,7 @@ class BrandHome extends React.PureComponent {
 
   render() {
     let {brandInfo, chocolates, isFetching} = this.props;
-    console.log(this.props)
+
     if (isFetching)
       return <img className="spinner" src="../images/Facebook.gif" alt="Loading..."/>
     else return (
@@ -34,7 +34,6 @@ class BrandHome extends React.PureComponent {
 
 
 function mapStateToProps(state) {
-  console.log(state.brandsState.toJS());
   return {
     brandInfo: state.brandsState.toJS().brand,
     chocolates: state.brandsState.toJS().chocolates,

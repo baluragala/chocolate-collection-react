@@ -13,7 +13,7 @@ import Signup from '../components/Signup';
 import Login from '../components/Login';
 import BrandHome from './BrandHome';
 import Logout from '../components/Logout';
-import ChocolateDetail from '../components/ChocolateDetail';
+import ChocolateDetail from './ChocolateDetail';
 import AddChocolate from '../components/AddChocolate';
 
 import * as brandsActionCreators from '../actionCreators/brands'
@@ -34,6 +34,7 @@ class App extends Component {
   componentWillMount() {
     let {actions} = this.props;
     actions.fetchBrands()
+    actions.fetchChocolates()
   }
 
   onSignupSuccess(firstName, lastName) {

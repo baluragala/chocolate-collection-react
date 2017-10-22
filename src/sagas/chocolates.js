@@ -13,9 +13,9 @@ function* getChocolates() {
   }
 }
 
-function* getChocolate(id) {
+function* getChocolate(action) {
   try {
-    let chocolate = yield call(() => fetch(`http://localhost:4000/chocolates/${id}`)
+    let chocolate = yield call(() => fetch(`http://localhost:4000/chocolates/${action.id}`)
       .then(response => response.json()));
     yield put(chocolatesActionCreators.showChocolate(chocolate))
   } catch (error) {

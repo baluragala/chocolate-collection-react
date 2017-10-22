@@ -7,7 +7,7 @@ import {Map} from 'immutable'
 
 let initialState = {
   brandsState: Map({brands: [], isFetching: true}),
-  chocolatesState: Map({chocolates: []}),
+  chocolatesState: Map({chocolates: [], isFetching: true}),
   usersState: Map({isLoggedIn: false, firstName: '', lastName: ''})
 };
 let sagaMiddleware = createSagaMiddleware();
