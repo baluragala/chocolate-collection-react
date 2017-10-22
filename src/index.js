@@ -8,8 +8,6 @@ import store from './createStore';
 
 import {
   BrowserRouter as Router,
-  Route,
-  Link
 } from 'react-router-dom'
 
 ReactDOM.render(

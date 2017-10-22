@@ -31,7 +31,7 @@ class SearchResult extends React.Component {
       <div>
         {
           this.state.chocolates ? <ChocolateList chocolates={this.state.chocolates}/> :
-            <img className="spinner" src="images/Facebook.gif"/>
+            <img className="spinner" src="images/Facebook.gif" alt="Loading..."/>
         }
 
         {

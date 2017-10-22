@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bb3b847-c225-4f1e-b9a0-c3e30b5672f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/createStore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/chocolates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/users.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sagas/brands.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sagas/chocolates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sagas/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sagas/users.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/containers/App.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/containers/App.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/App.test.js" afterPath="$PROJECT_DIR$/src/containers/App.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/BrandCard.js" afterPath="$PROJECT_DIR$/src/components/BrandCard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/BrandHome.js" afterPath="$PROJECT_DIR$/src/components/BrandHome.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/ChocolateDetail.js" afterPath="$PROJECT_DIR$/src/components/ChocolateDetail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SearchResult.js" afterPath="$PROJECT_DIR$/src/components/SearchResult.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/App.js" afterPath="$PROJECT_DIR$/src/containers/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/brands.js" afterPath="$PROJECT_DIR$/src/reducers/brands.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sagas/brands.js" afterPath="$PROJECT_DIR$/src/sagas/brands.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,108 +26,11 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="99" column="43" lean-forward="false" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
+            <state relative-caret-position="194">
+              <caret line="74" column="6" lean-forward="false" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="brands.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/brands.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actionCreators/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="redux.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/redux/dist/redux.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="664" column="9" lean-forward="false" selection-start-line="664" selection-start-column="9" selection-end-line="664" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createStore.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/createStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="69" lean-forward="false" selection-start-line="7" selection-start-column="69" selection-end-line="7" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-                <element signature="e#124#154#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="redux-logger.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/redux-logger/dist/redux-logger.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2233">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sagas/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chocolates.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/chocolates.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -187,18 +84,14 @@
         <option value="$PROJECT_DIR$/src/components/BrandList.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/BrandHome.css" />
-        <option value="$PROJECT_DIR$/src/components/BrandHome.js" />
-        <option value="$PROJECT_DIR$/src/components/BrandCard.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/Signup.js" />
         <option value="$PROJECT_DIR$/src/components/Home.js" />
         <option value="$PROJECT_DIR$/src/components/Login.js" />
         <option value="$PROJECT_DIR$/src/components/Navigation.js" />
         <option value="$PROJECT_DIR$/src/components/Status.js" />
-        <option value="$PROJECT_DIR$/src/components/SearchResult.js" />
         <option value="$PROJECT_DIR$/src/components/ChocolateCard.js" />
         <option value="$PROJECT_DIR$/src/components/ChocolateDetail.css" />
-        <option value="$PROJECT_DIR$/src/components/ChocolateDetail.js" />
         <option value="$PROJECT_DIR$/src/components/Logout.js" />
         <option value="$PROJECT_DIR$/src/components/Search.js" />
         <option value="$PROJECT_DIR$/db.json" />
@@ -209,17 +102,21 @@
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/sagas/users.js" />
         <option value="$PROJECT_DIR$/src/actionCreators/brands.js" />
-        <option value="$PROJECT_DIR$/src/sagas/brands.js" />
         <option value="$PROJECT_DIR$/src/actionTypes/chocolates.js" />
         <option value="$PROJECT_DIR$/src/actionCreators/chocolates.js" />
         <option value="$PROJECT_DIR$/src/sagas/chocolates.js" />
         <option value="$PROJECT_DIR$/src/sagas/index.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/actionCreators/users.js" />
         <option value="$PROJECT_DIR$/src/reducers/chocolates.js" />
-        <option value="$PROJECT_DIR$/src/reducers/brands.js" />
         <option value="$PROJECT_DIR$/src/reducers/users.js" />
         <option value="$PROJECT_DIR$/src/createStore.js" />
+        <option value="$PROJECT_DIR$/src/reducers/brands.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/sagas/brands.js" />
+        <option value="$PROJECT_DIR$/src/components/SearchResult.js" />
+        <option value="$PROJECT_DIR$/src/components/BrandHome.js" />
+        <option value="$PROJECT_DIR$/src/components/ChocolateDetail.js" />
+        <option value="$PROJECT_DIR$/src/components/BrandCard.js" />
         <option value="$PROJECT_DIR$/src/containers/App.js" />
       </list>
     </option>
@@ -289,6 +186,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="chocolate-collection-react-redux" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chocolate-collection-react-redux" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sagas" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -349,7 +252,7 @@
       <workItem from="1508472618028" duration="955000" />
       <workItem from="1508477255709" duration="1332000" />
       <workItem from="1508608777887" duration="14000" />
-      <workItem from="1508609708914" duration="2621000" />
+      <workItem from="1508609708914" duration="3938000" />
     </task>
     <task id="LOCAL-00001" summary="First Commmit&#10;&#10;Skeleton commit with bootstrap 4 aplha configured with cdn">
       <created>1506832321867</created>
@@ -404,7 +307,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72546000" />
+    <option name="totallyTimeSpent" value="73863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -582,13 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SearchResult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Status.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -603,24 +499,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BrandCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ChocolateCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BrandHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -659,33 +541,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ChocolateDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Signup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
           <caret line="69" column="17" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="69" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="132">
-            <caret line="6" column="74" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="74" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -764,16 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sagas/brands.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#64#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actionCreators/chocolates.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -787,7 +636,7 @@
         <state relative-caret-position="924">
           <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
           <folding>
-            <element signature="e#0#72#0" expanded="true" />
+            <element signature="e#0#72#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -797,18 +646,16 @@
         <state relative-caret-position="110">
           <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/redux-logger/dist/redux-logger.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1903">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -816,46 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="664" column="9" lean-forward="false" selection-start-line="664" selection-start-column="9" selection-end-line="664" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actionCreators/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/chocolates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/brands.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/redux-logger/dist/redux-logger.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2233">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -871,10 +678,169 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/actionCreators/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="132">
+            <caret line="6" column="74" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="74" />
+            <folding>
+              <marker date="1508474952687" expanded="true" signature="12739:12767" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="14160:14490" ph="{&quot;version&quot;: &quot;0.2.0&quot;...}" />
+              <marker date="1508474952687" expanded="true" signature="14204:14488" ph="[...]" />
+              <marker date="1508474952687" expanded="true" signature="14205:14487" ph="{&quot;name&quot;: &quot;Chrome&quot;...}" />
+              <marker date="1508474952687" expanded="true" signature="14435:14483" ph="{&quot;webpack:///src/*&quot;: &quot;${webRoot}/*&quot;...}" />
+              <marker date="1508474952687" expanded="true" signature="19551:19582" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="19564:19580" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="19688:19753" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="19832:19887" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="19845:19885" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="21749:22046" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="21773:21923" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="21828:21860" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="21882:21917" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="21937:22044" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="21958:22033" ph="&lt;div/&gt;" />
+              <marker date="1508474952687" expanded="true" signature="22979:22999" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="23035:23092" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="23174:23279" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="23187:23277" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="24358:24424" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="24457:24744" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="30226:30276" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="30383:30470" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="30680:30720" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="33552:33817" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="33556:33750" ph="//..." />
+              <marker date="1508474952687" expanded="true" signature="36252:36336" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="36337:36441" ph="//..." />
+              <marker date="1508474952687" expanded="true" signature="42205:42231" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="51111:51224" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="51133:51213" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="51147:51209" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="51578:52169" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="51600:52158" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="51660:51724" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="51784:51910" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="51853:51891" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="51986:52033" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="52108:52154" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="53100:53512" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="53122:53501" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="53139:53497" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="53226:53461" ph="//..." />
+              <marker date="1508474952687" expanded="true" signature="54620:54749" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="54629:54749" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="60360:60427" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="61291:61369" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="61408:61489" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="62429:62507" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="62546:62569" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="63480:63558" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="63596:63786" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="65241:65291" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="65764:65830" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="83041:83105" ph="{...}" />
+              <marker date="1508474952687" expanded="true" signature="104825:104873" ph="..." />
+              <marker date="1508474952687" expanded="true" signature="105015:105090" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/chocolates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BrandCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ChocolateDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="20" column="82" lean-forward="false" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BrandHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="28" column="82" lean-forward="false" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="33" column="78" lean-forward="false" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/brands.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sagas/brands.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="99" column="43" lean-forward="false" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
+        <state relative-caret-position="194">
+          <caret line="74" column="6" lean-forward="false" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

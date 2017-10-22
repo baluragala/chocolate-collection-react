@@ -33,13 +33,15 @@ class App extends Component {
   }
 
   componentWillMount() {
-    fetch('http://localhost:4000/brands')
+    let {actions} = this.props;
+    actions.fetchBrands()
+    /*fetch('http://localhost:4000/brands')
       .then(r => r.json())
       .then(brands => this.setState({brands}));
 
     fetch('http://localhost:4000/chocolates')
       .then(r => r.json())
-      .then(chocolates => this.setState({chocolates}))
+      .then(chocolates => this.setState({chocolates}))*/
   }
 
   onSignupSuccess(firstName, lastName) {
@@ -70,14 +72,14 @@ class App extends Component {
                    render={props => <Home {...props} isLoggedIn={this.state.isLoggedIn} firstName={this.state.firstName}
                                           lastName={this.state.lastName}/>}/>
             <Route exact path="/brands" render={props =>
-              this.state.brands.length ? <BrandList {...props} brands={this.state.brands}/> :
-                <img className="spinner" src="images/Facebook.gif"/>}/>
+              this.props.brands.length ? <BrandList {...props} brands={this.props.brands}/> :
+                <img className="spinner" src="images/Facebook.gif" alt="Loading..."/>}/>
             <Route path="/brands/:brandId" component={BrandHome}/>
 
             <Route exact path="/chocolates" render={props =>
               this.state.chocolates.length ?
                 <ChocolateList {...props} chocolates={this.state.chocolates} isLoggedIn={this.state.isLoggedIn}/> :
-                <img className="spinner" src="images/Facebook.gif"/>}/>
+                <img className="spinner" src="images/Facebook.gif" alt="Loading..."/>}/>
             <Route path="/chocolates/add" component={AddChocolate}/>
             <Route path="/chocolates/:chocolateId" component={ChocolateDetail}/>
 
@@ -95,17 +97,18 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state.brands.toJS());
   return {
-    brands: state.brands.brands,
+    brands: state.brands.toJS().brands,
     chocolates: state.chocolates.chocolates,
     isLoggedIn: state.isLoggedIn
   }
 }
 
-function mapDisptachToProps(dispatch) {
+function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({...brandsActionCreators, ...usersActionCreators, ...chocolatesActionCreators}, dispatch)
   }
 }
 
-export default connect(mapStateToProps, mapDisptachToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

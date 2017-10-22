@@ -6,7 +6,7 @@ function* getBrands() {
   try {
     let brands = yield call(() => fetch(`http://localhost:4000/brands`)
       .then(response => response.json()));
-    yield put(brandsActionCreators.showBrands())
+    yield put(brandsActionCreators.showBrands(brands))
   } catch (error) {
     yield put(brandsActionCreators.showBrandsError(error))
   }

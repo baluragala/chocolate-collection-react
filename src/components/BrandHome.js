@@ -26,7 +26,7 @@ class BrandHome extends React.PureComponent {
   render() {
     let {brandInfo, chocolates} = this.state;
     if (this.state.isFetching)
-      return <img className="spinner" src="../images/Facebook.gif"/>
+      return <img className="spinner" src="../images/Facebook.gif" alt="Loading..."/>
     else return (
       <div className="brand-info">
         <section>

@@ -18,7 +18,7 @@ class ChocolateDetail extends React.PureComponent {
   render() {
     let {chocolateInfo} = this.state;
     if (this.state.isFetching)
-      return <img className="spinner" src="../images/Facebook.gif"/>
+      return <img className="spinner" src="../images/Facebook.gif" alt="Loading..."/>
     else return (
       <div className="chocolate-info">
         <section>
