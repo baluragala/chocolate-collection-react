@@ -4,9 +4,9 @@ import chocolatesReducer from './chocolates';
 import {combineReducers} from 'redux';
 
 const rootReducer = combineReducers({
-  brands: brandsReducer,
-  users: usersReducer,
-  chocolates: chocolatesReducer,
+  brandsState: brandsReducer,
+  usersState: usersReducer,
+  chocolatesState: chocolatesReducer,
 });
 
 export default rootReducer;

@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BrandList from '../components/BrandList';
-import {Route} from 'react-router-dom';
+import {Route, withRouter} from 'react-router-dom';
 import Home from '../components/Home';
 import {Switch} from 'react-router';
 import ChocolateList from '../components/ChocolateList';
@@ -26,7 +26,6 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {brands: [], chocolates: [], isLoggedIn: false};
     this.onSignupSuccess = this.onSignupSuccess.bind(this);
     this.onLoginSuccess = this.onLoginSuccess.bind(this);
     this.doLogout = this.doLogout.bind(this);
@@ -35,13 +34,6 @@ class App extends Component {
   componentWillMount() {
     let {actions} = this.props;
     actions.fetchBrands()
-    /*fetch('http://localhost:4000/brands')
-      .then(r => r.json())
-      .then(brands => this.setState({brands}));
-
-    fetch('http://localhost:4000/chocolates')
-      .then(r => r.json())
-      .then(chocolates => this.setState({chocolates}))*/
   }
 
   onSignupSuccess(firstName, lastName) {
@@ -60,25 +52,25 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <Navigation isLoggedIn={this.state.isLoggedIn}
-                    firstName={this.state.firstName}
-                    lastName={this.state.lastName}/>
+        <Navigation isLoggedIn={this.props.isLoggedIn}
+                    firstName={this.props.firstName}
+                    lastName={this.props.lastName}/>
         <Header/>
         {/* Application Routing */}
         <main>
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/home"
-                   render={props => <Home {...props} isLoggedIn={this.state.isLoggedIn} firstName={this.state.firstName}
-                                          lastName={this.state.lastName}/>}/>
+                   render={props => <Home {...props} isLoggedIn={this.props.isLoggedIn} firstName={this.props.firstName}
+                                          lastName={this.props.lastName}/>}/>
             <Route exact path="/brands" render={props =>
               this.props.brands.length ? <BrandList {...props} brands={this.props.brands}/> :
                 <img className="spinner" src="images/Facebook.gif" alt="Loading..."/>}/>
             <Route path="/brands/:brandId" component={BrandHome}/>
 
             <Route exact path="/chocolates" render={props =>
-              this.state.chocolates.length ?
-                <ChocolateList {...props} chocolates={this.state.chocolates} isLoggedIn={this.state.isLoggedIn}/> :
+              this.props.chocolates.length ?
+                <ChocolateList {...props} chocolates={this.props.chocolates} isLoggedIn={this.props.isLoggedIn}/> :
                 <img className="spinner" src="images/Facebook.gif" alt="Loading..."/>}/>
             <Route path="/chocolates/add" component={AddChocolate}/>
             <Route path="/chocolates/:chocolateId" component={ChocolateDetail}/>
@@ -97,11 +89,12 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state.brands.toJS());
   return {
-    brands: state.brands.toJS().brands,
-    chocolates: state.chocolates.chocolates,
-    isLoggedIn: state.isLoggedIn
+    brands: state.brandsState.toJS().brands,
+    chocolates: state.chocolatesState.toJS().chocolates,
+    isLoggedIn: state.usersState.toJS().isLoggedIn,
+    firstName: state.usersState.toJS().firstName,
+    lastName: state.usersState.toJS().lastName
   }
 }
 
@@ -111,4 +104,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
