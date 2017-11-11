@@ -18,9 +18,12 @@
     "styled-components": "^2.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"json-server --watch db.json --port 4000 --delay 2000 --static ./public\" \"react-scripts start\" ",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
   }
 }
